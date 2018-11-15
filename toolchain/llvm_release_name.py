@@ -67,6 +67,7 @@ def _linux(llvm_version):
     elif distname == "debian" and int(version) >= 8:
         os_name = "linux-gnu-debian8"
     elif ((distname == "fedora" and int(version) >= 27) or
+            (distname == "rhel" and float(version) >= 7.0) or
             (distname == "centos" and int(version) >= 7)):
         os_name = "linux-gnu-Fedora27"
     else:
